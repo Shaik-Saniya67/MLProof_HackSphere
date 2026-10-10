@@ -127,4 +127,4 @@ This project was developed with the help of an AI coding assistant (Claude) for 
 
 ## Author
 
-Shaik — B.Tech CSE , SITAMS, Chittoor · [GitHub](https://github.com/Shaik-Saniya67)
+Shaik Saniya— B.Tech CSE , SITAMS, Chittoor · [GitHub](https://github.com/Shaik-Saniya67)

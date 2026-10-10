@@ -87,7 +87,6 @@ All models are wrapped in the same scikit-learn Pipeline and evaluated on the sa
 - **Classification:** accuracy, precision, recall, F1-score, balanced accuracy and confusion matrix (plus per-class metrics).
 - **Regression:** MAE, RMSE and R².
 
-![Model comparison results](docs/screenshots/08-compare.png)
 
 **Optional advanced model: TabNet.** TabNet (classification and regression) is documented separately because it needs additional dependencies (PyTorch and `pytorch-tabnet`, listed in `requirements-optional.txt`). It is **not enabled by default** and appears in the workflow only if those packages are installed. See [Setup](#setup) for installation. TabNet is slow on CPU and, like any model, may score below simpler models on small tabular datasets.
 

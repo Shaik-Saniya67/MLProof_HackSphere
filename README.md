@@ -1,8 +1,6 @@
 # MLProof — ML Evaluation Integrity Auditor
 
-> Train, Compare, and Verify Machine Learning Models.
-
-***Live Demo: https://mlproof-hackshphere-2k26.streamlit.app/***     || ***GitHub: https://github.com/Shaik-Saniya67/MLProof_HackSphere***
+> Train, Compare, and Verify Machine Learning Models.”
 
 MLProof is a Streamlit application that checks whether a machine-learning model's reported performance is supported by the evidence behind it. A headline number such as "96% accuracy" can be misleading, for example when 94% of the test labels belong to one class. MLProof recomputes the metrics, looks for common evaluation problems, and explains what it finds in plain language.
 
@@ -88,8 +86,6 @@ All models are wrapped in the same scikit-learn Pipeline and evaluated on the sa
 
 ![Model comparison results](docs/screenshots/08-compare.png)
 
-*The Compare step on a small demo dataset (50 rows): all six models on one shared test split, with a results table and a chart of classification metrics. On very small datasets the metrics vary a lot, so treat them as an illustration, not a benchmark.*
-
 **Optional advanced model: TabNet.** TabNet (classification and regression) is documented separately because it needs additional dependencies (PyTorch and `pytorch-tabnet`, listed in `requirements-optional.txt`). It is **not enabled by default** and appears in the workflow only if those packages are installed. See [Setup](#setup) for installation. TabNet is slow on CPU and, like any model, may score below simpler models on small tabular datasets.
 
 ## Screenshots
@@ -102,9 +98,6 @@ All models are wrapped in the same scikit-learn Pipeline and evaluated on the sa
 |---|---|
 | ![Dashboard](docs/screenshots/05-dashboard.png) | ![Dataset Discovery](docs/screenshots/04-discovery.png) |
 
-| Model Comparison (Guided workflow) |
-|---|
-| ![Model comparison](docs/screenshots/08-compare.png) |
 
 ## Technology stack
 
@@ -167,7 +160,6 @@ demo_data/                Sample predictions file
 ## AI usage disclosure
 
 This project was developed with the help of an AI coding assistant (Claude) for architecture, code, debugging, testing and documentation. The application itself does not call any AI model. The author is responsible for the final project.
-
 
 ## Author
 

@@ -39,7 +39,7 @@ MLProof has two audit modes.
 | Upload | CSV upload (or a built-in messy sample), preview, rows, columns, data types |
 | Analyze | Missing values, duplicate rows, constant columns, ID-like columns, numeric / categorical columns, distributions, IQR outliers, target class distribution and imbalance |
 | Clean (optional) | Remove duplicates, constant columns, ID-like columns, sparse columns or rows with missing values. Produces a separate cleaned copy with a before/after summary and action log. The original is never changed and the target column is never dropped |
-| Train | Task is suggested (classification / regression) and can be overridden. Classification: Logistic Regression, Decision Tree, Random Forest, XGBoost, CatBoost, Dummy baseline. Regression: Linear Regression, Decision Tree, Random Forest, XGBoost, CatBoost, Dummy baseline. TabNet (optional, classification and regression) is off by default and appears only if its packages are installed |
+| Train | Task is suggested (classification / regression) and can be overridden. Choose from the six model options listed in [Supported Machine Learning Models](#supported-machine-learning-models); optional TabNet (classification and regression) is off by default and appears only if its packages are installed |
 | Compare | Classification: accuracy, precision, recall, F1, balanced accuracy, confusion matrix, per-class metrics. Regression: MAE, RMSE, R² (no accuracy). Comparison table, charts, per-model detail view, plain-language explanation, and a warning when accuracy may be misleading because of class imbalance |
 | Export | Cleaned CSV, comparison CSV, and a summary report (PDF / JSON) with dataset findings, cleaning actions, model settings and metrics |
 
@@ -52,6 +52,37 @@ Both modes produce severity-rated findings (INFO → CRITICAL) with evidence, wh
 **Dataset Discovery** suggests alternative datasets from a small built-in catalogue (scikit-learn's bundled datasets) based on the weaknesses found, shows the reasons for each suggestion, lets you compare it with the current data, and re-runs the audit on it.
 
 **Reports** — PDF and JSON export for both modes.
+
+## Key Advantages
+
+- **No-Code Model Training:** Upload a dataset, select a target column, train machine learning models and evaluate the results directly in the interface, without writing any code.
+- **Multi-Model Comparison:** Train and compare multiple models on the same train/test split, so differences in performance reflect the models rather than the data split.
+- **Easy Dataset Analysis:** Inspect dataset structure, missing values, duplicate rows, constant and ID-like columns, and other data-quality issues before training.
+- **Optional Data Cleaning:** Create a separate cleaned copy of your dataset with a before/after summary and action log. The original data is preserved and the target column is never dropped.
+- **Task-Specific Evaluation:** Classification and regression models are evaluated with metrics suited to each task (for example, balanced accuracy and a confusion matrix for classification; MAE, RMSE and R² for regression).
+- **Model Reliability Auditing:** Integrity checks, severity-rated findings and downloadable PDF / JSON reports help you judge whether a reported result is actually supported by the evidence.
+
+## Supported Machine Learning Models
+
+The guided workflow offers six main model choices. The task (classification or regression) is suggested from the target column and can be overridden, and each choice maps to the matching model type:
+
+| Model | Classification | Regression |
+|---|---|---|
+| Logistic / Linear Regression | Logistic Regression | Linear Regression |
+| Decision Tree | Decision Tree Classifier | Decision Tree Regressor |
+| Random Forest | Random Forest Classifier | Random Forest Regressor |
+| XGBoost | XGBClassifier | XGBRegressor |
+| CatBoost | CatBoostClassifier | CatBoostRegressor |
+| Dummy Baseline | DummyClassifier | DummyRegressor |
+
+All models are wrapped in the same scikit-learn Pipeline and evaluated on the same test rows. The Dummy Baseline is a trivial reference (majority class / mean) that shows what a model must beat to add real value. Models use fixed, simple settings, with depth, tree count and boosting rounds editable. A model whose package is missing, or that fails on your data, is reported as skipped and the others still run.
+
+**Metrics used to compare models**
+
+- **Classification:** accuracy, precision, recall, F1-score, balanced accuracy and confusion matrix (plus per-class metrics).
+- **Regression:** MAE, RMSE and R².
+
+**Optional advanced model: TabNet.** TabNet (classification and regression) is documented separately because it needs additional dependencies (PyTorch and `pytorch-tabnet`, listed in `requirements-optional.txt`). It is **not enabled by default** and appears in the workflow only if those packages are installed. See [Setup](#setup) for installation. TabNet is slow on CPU and, like any model, may score below simpler models on small tabular datasets.
 
 ## Screenshots
 
@@ -127,4 +158,4 @@ This project was developed with the help of an AI coding assistant (Claude) for 
 
 ## Author
 
-Shaik Saniya— B.Tech CSE , SITAMS, Chittoor · [GitHub](https://github.com/Shaik-Saniya67)
+Shaik — B.Tech CSE , SITAMS, Chittoor · [GitHub](https://github.com/Shaik-Saniya67)

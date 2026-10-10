@@ -66,6 +66,8 @@ Both modes produce severity-rated findings (INFO → CRITICAL) with evidence, wh
 
 The guided workflow offers six main model choices. The task (classification or regression) is suggested from the target column and can be overridden, and each choice maps to the matching model type:
 
+![Six model choices](docs/screenshots/07-model-overview.png)
+
 | Model | Classification | Regression |
 |---|---|---|
 | Logistic / Linear Regression | Logistic Regression | Linear Regression |

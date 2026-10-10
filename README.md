@@ -1,6 +1,8 @@
 # MLProof — ML Evaluation Integrity Auditor
 
-> Train, Compare, and Verify Machine Learning Models.”
+> Train, Compare, and Verify Machine Learning Models.
+
+Live Demo: https://mlproof-hackshphere-2k26.streamlit.app/     ||  GitHub: https://github.com/Shaik-Saniya67/MLProof_HackSphere
 
 MLProof is a Streamlit application that checks whether a machine-learning model's reported performance is supported by the evidence behind it. A headline number such as "96% accuracy" can be misleading, for example when 94% of the test labels belong to one class. MLProof recomputes the metrics, looks for common evaluation problems, and explains what it finds in plain language.
 
@@ -84,6 +86,10 @@ All models are wrapped in the same scikit-learn Pipeline and evaluated on the sa
 - **Classification:** accuracy, precision, recall, F1-score, balanced accuracy and confusion matrix (plus per-class metrics).
 - **Regression:** MAE, RMSE and R².
 
+![Model comparison results](docs/screenshots/08-compare.png)
+
+*The Compare step on a small demo dataset (50 rows): all six models on one shared test split, with a results table and a chart of classification metrics. On very small datasets the metrics vary a lot, so treat them as an illustration, not a benchmark.*
+
 **Optional advanced model: TabNet.** TabNet (classification and regression) is documented separately because it needs additional dependencies (PyTorch and `pytorch-tabnet`, listed in `requirements-optional.txt`). It is **not enabled by default** and appears in the workflow only if those packages are installed. See [Setup](#setup) for installation. TabNet is slow on CPU and, like any model, may score below simpler models on small tabular datasets.
 
 ## Screenshots
@@ -160,4 +166,6 @@ This project was developed with the help of an AI coding assistant (Claude) for 
 
 ## Author
 
-Shaik — B.Tech CSE , SITAMS, Chittoor · [GitHub](https://github.com/Shaik-Saniya67)
+Shaik Saniya — B.Tech CSE , SITAMS, Chittoor ·
+
+

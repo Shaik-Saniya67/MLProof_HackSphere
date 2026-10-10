@@ -1,6 +1,8 @@
 # MLProof — ML Evaluation Integrity Auditor
 
-> Train, Compare, and Verify Machine Learning Models.”
+> Train, Compare, and Verify Machine Learning Models.
+
+ ***Live Demo: https://mlproof-hackshphere-2k26.streamlit.app/***     || ***GitHub: https://github.com/Shaik-Saniya67/MLProof_HackSphere***
 
 MLProof is a Streamlit application that checks whether a machine-learning model's reported performance is supported by the evidence behind it. A headline number such as "96% accuracy" can be misleading, for example when 94% of the test labels belong to one class. MLProof recomputes the metrics, looks for common evaluation problems, and explains what it finds in plain language.
 

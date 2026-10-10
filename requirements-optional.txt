@@ -1,0 +1,4 @@
+# Optional: only needed for the TabNet model in the Model 1 workflow.
+# MLProof works without these; TabNet is then shown as "not available".
+torch>=2.0
+pytorch-tabnet>=4.1

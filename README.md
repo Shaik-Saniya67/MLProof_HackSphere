@@ -2,7 +2,7 @@
 
 > Train, Compare, and Verify Machine Learning Models.
 
-Live Demo: https://mlproof-hackshphere-2k26.streamlit.app/     ||  GitHub: https://github.com/Shaik-Saniya67/MLProof_HackSphere
+***Live Demo: https://mlproof-hackshphere-2k26.streamlit.app/***     || ***GitHub: https://github.com/Shaik-Saniya67/MLProof_HackSphere***
 
 MLProof is a Streamlit application that checks whether a machine-learning model's reported performance is supported by the evidence behind it. A headline number such as "96% accuracy" can be misleading, for example when 94% of the test labels belong to one class. MLProof recomputes the metrics, looks for common evaluation problems, and explains what it finds in plain language.
 
@@ -102,6 +102,10 @@ All models are wrapped in the same scikit-learn Pipeline and evaluated on the sa
 |---|---|
 | ![Dashboard](docs/screenshots/05-dashboard.png) | ![Dataset Discovery](docs/screenshots/04-discovery.png) |
 
+| Model Comparison (Guided workflow) |
+|---|
+| ![Model comparison](docs/screenshots/08-compare.png) |
+
 ## Technology stack
 
 - **Language / UI:** Python 3, Streamlit
@@ -164,8 +168,7 @@ demo_data/                Sample predictions file
 
 This project was developed with the help of an AI coding assistant (Claude) for architecture, code, debugging, testing and documentation. The application itself does not call any AI model. The author is responsible for the final project.
 
+
 ## Author
 
-Shaik Saniya — B.Tech CSE , SITAMS, Chittoor ·
-
-
+Shaik — B.Tech CSE , SITAMS, Chittoor · [GitHub](https://github.com/Shaik-Saniya67)
